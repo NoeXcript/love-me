@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+
+    body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* overflow: hidden; */
+        background-image: linear-gradient(to top, deeppink, rgb(236, 77, 103), deeppink);
+
+
+        .container {
+            max-width: 90vw;
+            font-weight: 500;
+            width: 560px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 2rem;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            border-radius: 0.5rem;
+
+          
+            flex-direction: column;
+            gap: 4rem;
+            background-color: white;
+
+            .img-heart {
+                width: 100px;
+                height: 80px;
+                aspect-ratio: 16 / 9;
+                animation: zoom .6s ease-in-out;
+
+                img {
+                    object-fit: fill;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .text {
+                font-size: 28px;
+                color: #111;
+                text-align: center;
+
+            }
+            .btns{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                gap: .4rem;
+            }
+            .btn {
+               
+                bottom: 20px;
+                padding: .4rem .8rem;
+                border-radius: 50px;
+                color: #000;
+                font-weight: normal;
+                font-size: 18px;
+                width: 150px;
+                box-shadow: 1px 1px 1px deeppink;
+                border: 1px solid pink;
+                background-color: transparent;
+                cursor: pointer;
+
+                &.btn-yes {
+                    left: 100px;
+
+                    &:hover,
+                    &:active {
+                        box-shadow: 1px 1px 10px deeppink;
+                        color: deeppink;
+                    }
+
+                }
+
+
+                &.btn-no {
+                    right: 100px;
+                }
+
+            }
+        }
+    }
+}
